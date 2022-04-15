@@ -1,0 +1,39 @@
+﻿<h1>Employee List</h1>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (TSystem_MVC1.Models.Employeee item in (IEnumerable<TSystem_MVC1.Models.Employeee>)ViewData["Employee"])
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>@item.Name</td>
+            <td>@item.Salary</td>
+        </tr>
+    }
+</table>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (TSystem_MVC1.Models.Employeee item in ViewBag.Employee)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>@item.Name</td>
+            <td>@item.Salary</td>
+        </tr>
+    }
+</table>

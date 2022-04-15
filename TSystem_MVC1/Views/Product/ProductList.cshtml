@@ -1,0 +1,39 @@
+﻿<h1>Product List</h1>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (TSystem_MVC1.Models.Product item in (IEnumerable<TSystem_MVC1.Models.Product>)ViewData["Product"])
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (TSystem_MVC1.Models.Product item in ViewBag.ProductList)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
